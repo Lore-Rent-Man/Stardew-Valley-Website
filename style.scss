@@ -1,0 +1,243 @@
+/* BASE */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 300;
+    background-color: #fff;
+    color: #555;
+    margin: 0 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row-column {
+    flex: 1;
+}
+
+.row--vertical{
+    flex-direction: column;
+}
+
+.row--center{
+    align-content: center;
+}
+
+.row-column:not(:last-child) {
+    margin-right: 10px;
+}
+/* END Of layout */
+
+/* Header */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/StardewValley.png');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding-top: 20px;
+    position: relative;
+}
+
+.header__logo {
+    height: 150px;
+    width: auto;
+}
+
+.header__list {
+    list-style: none;
+    li {
+        display: inline-block;
+        margin-left: 40px;
+        a:link, a:visited{
+            font-size: 180%;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 8px 0;
+        }
+        a:hover, a:active{
+            border-bottom: 2px solid #e67e22;
+        }
+    }
+}
+
+.stardew-textbox {
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stardew-textbox__title--main {
+    color: #fff;
+    font-size: 480%;
+    word-spacing: 0.6rem;
+}
+/* End of Header Module */
+
+/* SECTION HEADER */
+.section-header {
+    width: 100%;
+    text-align: center;
+}
+
+.section-header__heading--main {
+    font-size: 360%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.section-header__separator {
+    width: 100px;
+    height: 2px;
+    background-color: #e67e22;
+    border: none;
+    position: relative;
+    top: -10px;
+}
+
+.section-header__desc {
+    font-size: 200%;
+    width: 70%;
+    text-align: left;
+    line-height: 145%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+/* END OF SECTION HEADER */
+
+/* COLUMN ITEM */
+.item {
+    text-align: left;
+}
+
+.item__header {
+    font-size: 220%;
+}
+
+.item__desc {
+    font-size: 180%;
+    line-height: 145%;
+}
+
+.item--center {
+    text-align: center;
+}
+/* END OF COLUMN ITEM */
+
+/* UTILS */
+.utils-block-center {
+    margin: 0 auto;
+}
+
+.utils-margin-top-4em {
+    margin-top: 4em;
+}
+
+.utils-margin-top-2em {
+    margin-top: 2em;
+}
+/* END OF UTILS */
+
+/* SECTION STEPS */
+.app-screen {
+    display: block;
+    width: 100%;
+    margin-top: 3em;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+}
+
+.appstore{
+    margin-left: 9em;
+}
+
+.playstore {
+    margin-left: 2em;
+}
+
+.section-steps__list {
+    list-style: none;
+    font-size: 200%;
+    counter-reset: my-awesome-counter;
+}
+
+.section-steps__list li {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    counter-increment: my-awesome-counter;
+    position: relative;
+}
+
+.section-steps__list li::before {
+    content: counter(my-awesome-counter);
+    position: absolute;
+    left: -40px;
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    color: #e67e22;
+    border: 2px #e67e22 solid;
+    font-size: 180%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* END OF SECTION STEPS */
+
+/* BEGINNING OF SECTION FORM */
+.submit-form{
+    text-align: center;
+}
+
+.submit-form__text{
+    font-size: 180%;
+    margin-right: 10px;
+    text-align: center;
+}
+/* END OF SECTION FORM */
+
+@media only screen and (max-width: 1000px){
+    .stardew-textbox{
+        width: 100%;
+      }
+      .header__logo {
+        height: 600px;
+      }
+
+      .header__list {
+          padding: 0px 20px;
+          text-align: center;
+        li {
+            margin-left: 0px;
+            a:link, a:visited{
+                font-size: 1100%;
+                padding: 0px;
+            }
+            a:hover, a:active{
+                border-bottom: 10px solid #e67e22;
+            }
+        }
+    }
+}
