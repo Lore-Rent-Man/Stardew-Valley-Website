@@ -206,17 +206,77 @@ body {
 
 /* END OF SECTION STEPS */
 
-/* BEGINNING OF SECTION FORM */
-.submit-form{
-    text-align: center;
+/* SECTION FORM */
+.section-form form {
+    font-size: 200%;
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 1em;
 }
 
-.submit-form__text{
-    font-size: 180%;
-    margin-right: 10px;
-    text-align: center;
+.section-form__label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.section-form__input {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 100%;
+}
+
+.section-form__actions {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-form__submit {
+    font-size: 90%;
 }
 /* END OF SECTION FORM */
+
+/* BUTTONS */
+.btn {
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 200px;
+    border: 1px solid #e67e22;
+    font-size: 180%;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    color: #fff;
+    background-color: #e67e22;
+    transition: background-color .2s, color .2s;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: #a15512;
+    border: 1px solid #a15512;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #a15512;
+    transition: background-color .2s, color .2s;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    color: #fff;
+    background-color: #e67e22;
+}
+/* End of Buttons module */
+
+
 
 @media only screen and (max-width: 1000px){
     .stardew-textbox{
@@ -241,3 +301,64 @@ body {
         }
     }
 }
+
+/* SECTION FOOTER */
+.site-footer {
+    background-color: #333;
+    color: #aaa;
+    font-size: 160%;
+    height: 200px;
+}
+
+.site-footer__links {
+    list-style: none;
+}
+
+.site-footer__links li {
+    display: inline-block;
+}
+
+.site-footer__links li a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 2em;
+    transition: color .2;
+}
+
+.site-footer__links li a:hover {
+    color: #fff;
+}
+
+.site-footer__social {
+    list-style: none;
+    text-align: right;
+}
+
+.site-footer__social li {
+    display: inline-block;
+}
+
+.site-footer__social li a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 2em;
+    transition: color .2;
+}
+
+.site-footer__social li a:hover {
+    color: #fff;
+}
+
+.site-footer__copyright {
+    margin: 0 auto;
+}
+
+.site-footer .row:first-child {
+    padding-top: 2em;
+}
+
+.site-footer .row:last-child {
+    padding-top: 3em;
+}
+
+/* END OF SECTION FOOTER */
